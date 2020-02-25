@@ -1,7 +1,7 @@
 package com.mask.demo.service.api.system;
 
-import com.mask.demo.dataaccess.model.system.SysMenuTest;
-import com.mask.demo.dataaccess.model.system.UserTest;
+import com.mask.demo.model.system.SysMenuTest;
+import com.mask.demo.model.system.UserTest;
 import com.mask.demo.service.beans.system.MenuTreeResponse;
 import com.mask.demo.service.beans.system.SysMenuTestExtend;
 

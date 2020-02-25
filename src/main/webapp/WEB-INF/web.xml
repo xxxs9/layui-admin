@@ -39,7 +39,7 @@
   <!-- userfilter -->
   <filter>
     <filter-name>userinfofilter</filter-name>
-    <filter-class>com.mask.demo.mgrframework.filters.UserFilter</filter-class>
+    <filter-class>com.mask.demo.frame.filters.UserFilter</filter-class>
   </filter>
   <filter-mapping>
     <filter-name>userinfofilter</filter-name>

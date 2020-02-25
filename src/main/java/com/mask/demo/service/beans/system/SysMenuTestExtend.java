@@ -1,6 +1,6 @@
 package com.mask.demo.service.beans.system;
 
-import com.mask.demo.dataaccess.model.system.SysMenuTest;
+import com.mask.demo.model.system.SysMenuTest;
 import lombok.Data;
 
 import java.io.Serializable;

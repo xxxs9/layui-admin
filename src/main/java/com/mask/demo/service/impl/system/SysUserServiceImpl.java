@@ -1,10 +1,10 @@
 package com.mask.demo.service.impl.system;
 
-import com.mask.demo.dataaccess.dao.system.SysUserRoleTestMapper;
-import com.mask.demo.dataaccess.dao.system.UserMapper;
-import com.mask.demo.dataaccess.model.system.SysRoleTest;
-import com.mask.demo.dataaccess.model.system.SysUserRoleTest;
-import com.mask.demo.dataaccess.model.system.UserTest;
+import com.mask.demo.dao.system.SysUserRoleTestMapper;
+import com.mask.demo.dao.system.UserMapper;
+import com.mask.demo.model.system.SysRoleTest;
+import com.mask.demo.model.system.SysUserRoleTest;
+import com.mask.demo.model.system.UserTest;
 import com.mask.demo.service.api.system.SysUserService;
 import com.mask.demo.service.beans.system.PageRange;
 import com.mask.demo.service.beans.system.SysUserResponse;
@@ -14,7 +14,7 @@ import com.mask.demo.utils.Constants;
 import com.mask.demo.utils.PasswordUtil;
 import com.mask.demo.utils.SHA1;
 import com.mask.demo.utils.UUIDUtil;
-import com.mask.demo.mgrframework.utils.CheckUtil;
+import com.mask.demo.frame.utils.CheckUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

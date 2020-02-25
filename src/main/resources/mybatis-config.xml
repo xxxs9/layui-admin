@@ -5,7 +5,7 @@
 <configuration>
 <!--可以在这里配置插件，比如打印SQL-->
     <plugins>
-        <plugin interceptor="com.mask.demo.dataaccess.interceptor.DialectStatementHandlerInterceptor">
+        <plugin interceptor="com.mask.demo.frame.mybatis.interceptor.DialectStatementHandlerInterceptor">
             <property name="debug" value="true"/>
         </plugin>
     </plugins>

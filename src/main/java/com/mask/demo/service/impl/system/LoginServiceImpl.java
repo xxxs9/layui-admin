@@ -1,9 +1,9 @@
 package com.mask.demo.service.impl.system;
 
-import com.mask.demo.dataaccess.dao.system.UserMapper;
-import com.mask.demo.dataaccess.model.system.UserTest;
-import com.mask.demo.mgrframework.beans.response.AbstractResult;
-import com.mask.demo.mgrframework.exceptions.BizException;
+import com.mask.demo.dao.system.UserMapper;
+import com.mask.demo.model.system.UserTest;
+import com.mask.demo.frame.beans.response.AbstractResult;
+import com.mask.demo.frame.exceptions.BizException;
 import com.mask.demo.service.api.system.LoginService;
 import com.mask.demo.service.beans.system.LoginResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -20,7 +20,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
-import static com.mask.demo.mgrframework.utils.CheckUtil.*;
+import static com.mask.demo.frame.utils.CheckUtil.*;
 
 /**
  * 登录服务

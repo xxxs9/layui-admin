@@ -1,8 +1,8 @@
 package com.mask.demo.service.impl.system;
 
 import com.mask.demo.service.api.system.SysAccessPermissionService;
-import com.mask.demo.dataaccess.dao.system.SysAccessPermissionTestMapper;
-import com.mask.demo.dataaccess.model.system.SysAccessPermissionTest;
+import com.mask.demo.dao.system.SysAccessPermissionTestMapper;
+import com.mask.demo.model.system.SysAccessPermissionTest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

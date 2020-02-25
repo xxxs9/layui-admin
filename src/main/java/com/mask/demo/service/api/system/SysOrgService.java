@@ -1,6 +1,6 @@
 package com.mask.demo.service.api.system;
 
-import com.mask.demo.dataaccess.model.system.SysOrganizeTest;
+import com.mask.demo.model.system.SysOrganizeTest;
 import com.mask.demo.service.beans.system.OrgNodeResponse;
 
 import java.util.List;

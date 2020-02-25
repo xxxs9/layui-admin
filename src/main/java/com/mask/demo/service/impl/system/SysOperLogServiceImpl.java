@@ -1,13 +1,13 @@
 package com.mask.demo.service.impl.system;
 
 import com.mask.demo.service.api.system.SysOperLogService;
-import com.mask.demo.dataaccess.dao.system.SysOperLogTestMapper;
-import com.mask.demo.dataaccess.model.system.SysOperLogTest;
+import com.mask.demo.dao.system.SysOperLogTestMapper;
+import com.mask.demo.model.system.SysOperLogTest;
 import com.mask.demo.service.beans.system.LogBatchDelRequest;
 import com.mask.demo.service.beans.system.PageRange;
 import com.mask.demo.utils.DateUtil;
 import com.mask.demo.utils.UUIDUtil;
-import com.mask.demo.mgrframework.utils.CheckUtil;
+import com.mask.demo.frame.utils.CheckUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

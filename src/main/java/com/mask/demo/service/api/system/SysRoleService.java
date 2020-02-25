@@ -1,6 +1,6 @@
 package com.mask.demo.service.api.system;
 
-import com.mask.demo.dataaccess.model.system.SysRoleTest;
+import com.mask.demo.model.system.SysRoleTest;
 
 import java.util.List;
 

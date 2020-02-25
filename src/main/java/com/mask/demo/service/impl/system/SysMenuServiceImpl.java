@@ -1,9 +1,9 @@
 package com.mask.demo.service.impl.system;
 
-import com.mask.demo.dataaccess.dao.system.*;
-import com.mask.demo.dataaccess.model.system.*;
-import com.mask.demo.mgrframework.utils.UserInfoUtil;
-import com.mask.demo.security.ShiroConfigService;
+import com.mask.demo.dao.system.*;
+import com.mask.demo.model.system.*;
+import com.mask.demo.frame.utils.UserInfoUtil;
+import com.mask.demo.frame.security.ShiroConfigService;
 import com.mask.demo.service.api.system.SysMenuService;
 import com.mask.demo.service.beans.system.MenuTreeResponse;
 import com.mask.demo.service.beans.system.PageRange;
@@ -11,7 +11,7 @@ import com.mask.demo.service.beans.system.SysMenuTestExtend;
 import com.mask.demo.utils.Constants;
 import com.mask.demo.utils.ShiroFilterSortUtil;
 import com.mask.demo.utils.UUIDUtil;
-import com.mask.demo.mgrframework.utils.CheckUtil;
+import com.mask.demo.frame.utils.CheckUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

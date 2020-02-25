@@ -1,13 +1,13 @@
 package com.mask.demo.service.impl.system;
 
-import com.mask.demo.dataaccess.dao.system.SysOrganizeTestMapper;
-import com.mask.demo.dataaccess.model.system.SysOrganizeTest;
+import com.mask.demo.dao.system.SysOrganizeTestMapper;
+import com.mask.demo.model.system.SysOrganizeTest;
 import com.mask.demo.service.api.system.SysOrgService;
 import com.mask.demo.service.beans.system.OrgNodeResponse;
 import com.mask.demo.utils.Constants;
 import com.mask.demo.utils.NumberUtil;
 import com.mask.demo.utils.UUIDUtil;
-import com.mask.demo.mgrframework.utils.CheckUtil;
+import com.mask.demo.frame.utils.CheckUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

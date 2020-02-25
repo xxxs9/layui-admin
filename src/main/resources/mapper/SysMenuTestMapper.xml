@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.mask.demo.dataaccess.dao.system.SysMenuTestMapper">
+<mapper namespace="com.mask.demo.dao.system.SysMenuTestMapper">
 
-    <resultMap id="BaseResultMap" type="com.mask.demo.dataaccess.model.system.SysMenuTest">
+    <resultMap id="BaseResultMap" type="com.mask.demo.model.system.SysMenuTest">
         <id column="ID" property="id" jdbcType="VARCHAR"/>
         <result column="TITLE" property="title" jdbcType="VARCHAR"/>
         <result column="HREF" property="href" jdbcType="VARCHAR"/>
@@ -54,7 +54,7 @@
         where ID = #{id,jdbcType=VARCHAR}
     </delete>
 
-    <insert id="insert" parameterType="com.mask.demo.dataaccess.model.system.SysMenuTest">
+    <insert id="insert" parameterType="com.mask.demo.model.system.SysMenuTest">
         insert into SYS_MENU_TEST (ID, TITLE, HREF, REQUEST_URL
         CODE,ICON,TARGET, PARENT_ID, SORT,CREATE_USER,
         CREATE_TIME, UPDATE_USER, UPDATE_TIME
@@ -68,7 +68,7 @@
         )
     </insert>
 
-    <insert id="insertSelective" parameterType="com.mask.demo.dataaccess.model.system.SysMenuTest">
+    <insert id="insertSelective" parameterType="com.mask.demo.model.system.SysMenuTest">
         insert into SYS_MENU_TEST
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -154,7 +154,7 @@
         </trim>
     </insert>
 
-    <update id="updateByPrimaryKeySelective" parameterType="com.mask.demo.dataaccess.model.system.SysMenuTest">
+    <update id="updateByPrimaryKeySelective" parameterType="com.mask.demo.model.system.SysMenuTest">
         update SYS_MENU_TEST
         <set>
             <if test="title != null">
@@ -197,7 +197,7 @@
         where ID = #{id,jdbcType=VARCHAR}
     </update>
 
-    <update id="updateByPrimaryKey" parameterType="com.mask.demo.dataaccess.model.system.SysMenuTest">
+    <update id="updateByPrimaryKey" parameterType="com.mask.demo.model.system.SysMenuTest">
         update SYS_MENU_TEST
         set TITLE = #{title,jdbcType=VARCHAR},
         HREF = #{href,jdbcType=VARCHAR},
