@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <!--mapper映射-->
-<mapper namespace="com.gameloft9.demo.dataaccess.dao.system.UserMapper">
+<mapper namespace="com.mask.demo.dataaccess.dao.system.UserMapper">
     <!--结果集映射-->
-    <resultMap id="BaseResultMap" type="com.gameloft9.demo.dataaccess.model.system.UserTest">
+    <resultMap id="BaseResultMap" type="com.mask.demo.dataaccess.model.system.UserTest">
         <id column="ID" property="id" jdbcType="VARCHAR"/>
         <result column="LOGIN_NAME" property="loginName" jdbcType="VARCHAR"/>
         <result column="PASSWORD" property="password" jdbcType="VARCHAR"/>
@@ -96,7 +96,7 @@
     delete from USER_TEST
     where ID = #{id,jdbcType=VARCHAR}
   </delete>
-    <insert id="insert" parameterType="com.gameloft9.demo.dataaccess.model.system.UserTest">
+    <insert id="insert" parameterType="com.mask.demo.dataaccess.model.system.UserTest">
     insert into USER_TEST (ID, LOGIN_NAME, PASSWORD,
     REAL_NAME, IS_FORBIDDEN, MOBILE,
     ICON, ORG_ID, ORG_NAME,
@@ -106,7 +106,7 @@
     #{icon,jdbcType=VARCHAR}, #{orgId,jdbcType=VARCHAR}, #{orgName,jdbcType=VARCHAR},
     #{createDate,jdbcType=TIMESTAMP}, #{updateDate,jdbcType=TIMESTAMP})
   </insert>
-    <insert id="insertSelective" parameterType="com.gameloft9.demo.dataaccess.model.system.UserTest">
+    <insert id="insertSelective" parameterType="com.mask.demo.dataaccess.model.system.UserTest">
         insert into USER_TEST
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -179,7 +179,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.gameloft9.demo.dataaccess.model.system.UserTest">
+    <update id="updateByPrimaryKeySelective" parameterType="com.mask.demo.dataaccess.model.system.UserTest">
         update USER_TEST
         <set>
             <if test="loginName != null">
@@ -215,7 +215,7 @@
         </set>
         where ID = #{id,jdbcType=VARCHAR}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.gameloft9.demo.dataaccess.model.system.UserTest">
+    <update id="updateByPrimaryKey" parameterType="com.mask.demo.dataaccess.model.system.UserTest">
     update USER_TEST
     set LOGIN_NAME = #{loginName,jdbcType=VARCHAR},
     PASSWORD = #{password,jdbcType=VARCHAR},

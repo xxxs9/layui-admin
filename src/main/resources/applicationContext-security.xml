@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <!-- 配置shrio的验证，这里使用完全自定义的实现 -->
-    <bean id="shiroRealm" class="com.gameloft9.demo.security.ShiroRealm">
+    <bean id="shiroRealm" class="com.mask.demo.security.ShiroRealm">
         <property name="userServiceImpl" ref="sysUserServiceImpl"/>
     </bean>
 
@@ -29,7 +29,7 @@
     -->
 
     <!--自定义filter-->
-    <bean id="roleOrFilter" class="com.gameloft9.demo.security.RoleOrAuthorizationFilter" />
+    <bean id="roleOrFilter" class="com.mask.demo.security.RoleOrAuthorizationFilter" />
 
     <!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->
     <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
