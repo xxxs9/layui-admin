@@ -1,9 +1,9 @@
 package com.mask.demo.service.api.system;
 
 import com.mask.demo.model.system.UserTest;
-import com.mask.demo.service.beans.system.SysUserResponse;
-import com.mask.demo.service.beans.system.UserAddRequest;
-import com.mask.demo.service.beans.system.UserUpdateRequest;
+import com.mask.demo.service.dto.system.SysUserResponse;
+import com.mask.demo.service.dto.system.UserAddRequest;
+import com.mask.demo.service.dto.system.UserUpdateRequest;
 
 import java.util.List;
 

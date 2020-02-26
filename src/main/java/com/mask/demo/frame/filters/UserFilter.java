@@ -8,8 +8,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /**
- * 用户信息filter
- * Created by leiYao on 2017/11/14.
+ * @author: mac
+ * @description: 用户信息filter
+ * @date: 2020-02-25 16:20
  */
 public class UserFilter implements Filter {
 

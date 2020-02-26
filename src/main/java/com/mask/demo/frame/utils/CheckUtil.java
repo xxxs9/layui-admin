@@ -14,11 +14,11 @@ import java.util.List;
 
 
 /**
- * 通用校验工具类
- * 1、一级校验：校验model上面的注解
- * 2、二级校验：service里面的通用检查
- *
- * @author gameloft9 2017-11-10
+ * @author: mac
+ * @description: 通用校验工具类
+ *   1、一级校验：校验model上面的注解
+ *   2、二级校验：service里面的通用检查
+ * @date: 2020-02-25 16:22
  */
 @Slf4j
 public class CheckUtil {

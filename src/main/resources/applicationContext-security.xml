@@ -11,8 +11,8 @@
     <!--也可以使用JdbcRealm，少写点代码-->
     <!--<bean id="shiroRealm" class="org.apache.shiro.realm.jdbc.JdbcRealm">-->
         <!--<property name="dataSource" ref="dataSource"/>-->
-        <!--<property name="authenticationQuery" value="select password from USER_TEST  WHERE login_name = ?"/>-->
-        <!--<property name="userRolesQuery" value="select r.role_name from SYS_ROLE_TEST r where r.id in( select t.role_id from SYS_USER_ROLE_TEST t where t.user_id = (select id from user_test where login_name = ?)) and r.is_deleted = '0'"/>-->
+        <!--<property name="authenticationQuery" value="select password from SYS_USER  WHERE login_name = ?"/>-->
+        <!--<property name="userRolesQuery" value="select r.role_name from SYS_ROLE_TEST r where r.id in( select t.role_id from SYS_USER_ROLE_TEST t where t.user_id = (select id from SYS_USER where login_name = ?)) and r.is_deleted = '0'"/>-->
     <!--</bean>-->
 
     <!-- 配置shrio的验证管理 -->

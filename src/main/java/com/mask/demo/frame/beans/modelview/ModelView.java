@@ -6,8 +6,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 模型视图封装
- * Created by gameloft9 on 2017/12/5.
+ * @author: mac
+ * @description: 模型视图封装
+ * @date: 2020-02-25 16:19
  */
 @Data
 public class ModelView {

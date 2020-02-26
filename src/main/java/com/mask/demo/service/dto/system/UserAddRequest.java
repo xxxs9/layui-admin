@@ -1,18 +1,17 @@
-package com.mask.demo.service.beans.system;
+package com.mask.demo.service.dto.system;
 
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 返回给前端的用户信息
+ * 新增用户请求bean
  * Created by gameloft9 on 2017/12/21.
  */
 @Data
-public class SysUserResponse implements Serializable{
-    private String id;
+public class UserAddRequest implements Serializable{
+
     /**登录名*/
     private String loginName;
     /**真实姓名*/
@@ -25,11 +24,4 @@ public class SysUserResponse implements Serializable{
     private String mobile;
     /**所属角色列表*/
     private List<String> roleIdList;
-
-    /**
-     * 构造函数
-     * */
-    public SysUserResponse(){
-        this.roleIdList = new ArrayList<String>();
-    }
 }

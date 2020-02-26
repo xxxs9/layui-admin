@@ -1,8 +1,9 @@
 package com.mask.demo.frame.beans.constant;
 
 /**
- * 操作类型枚举
- * Created by leiYao on 2017/11/13.
+ * @author: mac
+ * @description: 操作类型枚举
+ * @date: 2020-02-25 16:19
  */
 public enum OperType {
     /**

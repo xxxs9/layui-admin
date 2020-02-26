@@ -6,6 +6,11 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * @author: mac
+ * @description: TODO
+ * @date: 2020-02-25 17:52
+ */
 @Data
 public class SysAccessPermissionTest implements Serializable{
     private static final long serialVersionUID = 1L;

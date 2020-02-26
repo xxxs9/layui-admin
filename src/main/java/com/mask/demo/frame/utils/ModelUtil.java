@@ -5,8 +5,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.ui.Model;
 
 /**
- * Model工具类
- * Created by leiYao on 2017/11/13.
+ * @author: mac
+ * @description: Model工具类
+ * @date: 2020-02-25 16:22
  */
 @Slf4j
 public class ModelUtil {

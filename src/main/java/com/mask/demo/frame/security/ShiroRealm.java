@@ -15,8 +15,9 @@ import org.apache.shiro.subject.PrincipalCollection;
 import java.util.List;
 
 /**
- * 认证授权。
- * @author gameloft9
+ * @author: mac
+ * @description: 认证授权
+ * @date: 2020-02-25 16:22
  */
 @Slf4j
 @Data

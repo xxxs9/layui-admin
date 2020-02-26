@@ -5,8 +5,9 @@ import com.mask.demo.frame.exceptions.UnloginException;
 import org.slf4j.MDC;
 
 /**
- * 用户信息工具类，保存用户信息到threadlocal，方便打印日志
- * Created by leiYao on 2017/11/14.
+ * @author: mac
+ * @description: 用户信息工具类，保存用户信息到threadlocal，方便打印日志
+ * @date: 2020-02-25 16:22
  */
 public class UserInfoUtil {
 

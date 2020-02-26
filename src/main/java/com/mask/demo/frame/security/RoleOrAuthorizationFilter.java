@@ -7,9 +7,10 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 /**
- * shiro的url定义中的roles参数，必须满足所有角色才通过(也就是and关系)
- * 这里自定义一个权限满足角色之一的Or关系的filter
- * Created by gameloft9 on 2018/7/23.
+ * @author: mac
+ * @description: shiro的url定义中的roles参数，必须满足所有角色才通过(也就是and关系)
+ *    这里自定义一个权限满足角色之一的Or关系的filter
+ * @date: 2020-02-25 16:21
  */
 public class RoleOrAuthorizationFilter extends AuthorizationFilter {
 

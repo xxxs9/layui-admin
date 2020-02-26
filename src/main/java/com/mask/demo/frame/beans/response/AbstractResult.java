@@ -3,8 +3,9 @@ package com.mask.demo.frame.beans.response;
 import lombok.Data;
 
 /**
- * 抽象结果
- * Created by gameloft9 on 2017/11/13.
+ * @author: mac
+ * @description: 抽象结果
+ * @date: 2020-02-25 16:20
  */
 @Data
 public abstract class AbstractResult implements IResult{

@@ -1,4 +1,4 @@
-package com.mask.demo.service.beans.system;
+package com.mask.demo.service.dto.system;
 
 import lombok.Data;
 import org.hibernate.validator.constraints.NotBlank;

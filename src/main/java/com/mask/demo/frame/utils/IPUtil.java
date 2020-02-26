@@ -3,7 +3,9 @@ package com.mask.demo.frame.utils;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by gameloft9 on 2017/12/5.
+ * @author: mac
+ * @description: 获取IP
+ * @date: 2020-02-25 16:22
  */
 public class IPUtil {
     /**

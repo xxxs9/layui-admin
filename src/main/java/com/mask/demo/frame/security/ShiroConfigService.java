@@ -19,9 +19,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * shiro 动态权限配置相关服务
- *
- * @author gameloft9
+ * @author: mac
+ * @description: shiro 动态权限配置相关服务
+ * @date: 2020-02-25 16:21
  */
 @Service
 @Slf4j

@@ -7,8 +7,10 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * 应用日志Model
- * */
+ * @author: mac
+ * @description: 应用日志Model
+ * @date: 2020-02-25 17:52
+ */
 @Data
 public class SysOperLogTest implements Serializable{
     private static final long serialVersionUID = 1L;

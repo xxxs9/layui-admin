@@ -18,7 +18,7 @@
         <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 
-    <resultMap id="ExtendResultMap" type="com.mask.demo.service.beans.system.SysMenuTestExtend">
+    <resultMap id="ExtendResultMap" type="com.mask.demo.service.dto.system.SysMenuTestExtend">
         <id column="ID" property="id" jdbcType="VARCHAR"/>
         <result column="TITLE" property="title" jdbcType="VARCHAR"/>
         <result column="HREF" property="href" jdbcType="VARCHAR"/>

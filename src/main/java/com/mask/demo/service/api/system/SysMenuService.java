@@ -2,8 +2,8 @@ package com.mask.demo.service.api.system;
 
 import com.mask.demo.model.system.SysMenuTest;
 import com.mask.demo.model.system.UserTest;
-import com.mask.demo.service.beans.system.MenuTreeResponse;
-import com.mask.demo.service.beans.system.SysMenuTestExtend;
+import com.mask.demo.service.dto.system.MenuTreeResponse;
+import com.mask.demo.service.dto.system.SysMenuTestExtend;
 
 import java.util.List;
 

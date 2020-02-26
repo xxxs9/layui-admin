@@ -196,10 +196,10 @@ INSERT INTO `sys_user_role_test` VALUES ('03f9afb1d42e49d6a026f537d9f033b6', '9d
 INSERT INTO `sys_user_role_test` VALUES ('2fb2a9fb965e462eb72c14361a83f006', '123', 'J/F9-+?');
 
 -- ----------------------------
--- Table structure for user_test
+-- Table structure for sys_user
 -- ----------------------------
-DROP TABLE IF EXISTS `user_test`;
-CREATE TABLE `user_test`  (
+DROP TABLE IF EXISTS `sys_user`;
+CREATE TABLE `sys_user`  (
   `ID` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户测试表',
   `LOGIN_NAME` varchar(10) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
   `PASSWORD` varchar(128) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
@@ -216,8 +216,8 @@ CREATE TABLE `user_test`  (
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of user_test
+-- Records of sys_user
 -- ----------------------------
-INSERT INTO `user_test` VALUES ('123', 'gameloft9', '7C4A8D09CA3762AF61E59520943DC26494F8941B', 'leiyao', '0', '13618629441', NULL, 'gameloft9', '总公司', '2017-12-28 16:24:32', '2017-12-28 16:32:57');
+INSERT INTO `sys_user` VALUES ('123', 'gameloft9', '7C4A8D09CA3762AF61E59520943DC26494F8941B', 'leiyao', '0', '13618629441', NULL, 'gameloft9', '总公司', '2017-12-28 16:24:32', '2017-12-28 16:32:57');
 
 SET FOREIGN_KEY_CHECKS = 1;

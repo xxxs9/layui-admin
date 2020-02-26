@@ -14,8 +14,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * shiro filter放在Java代码里配置，方便从数据库动态加载配置
- * Created by gameloft9 on 2017/12/4.
+ * @author: mac
+ * @description: shiro filter放在Java代码里配置，方便从数据库动态加载配置
+ * @date: 2020-02-25 16:21
  */
 @Configuration
 @Slf4j

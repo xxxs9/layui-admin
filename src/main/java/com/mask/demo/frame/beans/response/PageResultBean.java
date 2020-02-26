@@ -6,9 +6,10 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 分页返回封装
- * @author gameloft9 2017-11-10
- * */
+ * @author: mac
+ * @description: 分页返回封装
+ * @date: 2020-02-25 16:20
+ */
 @Data
 public class PageResultBean<T> extends AbstractResult  implements Serializable{
 

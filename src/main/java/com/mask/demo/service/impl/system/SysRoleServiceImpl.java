@@ -5,7 +5,7 @@ import com.mask.demo.frame.utils.UserInfoUtil;
 import com.mask.demo.service.api.system.SysRoleService;
 import com.mask.demo.dao.system.SysRoleTestMapper;
 import com.mask.demo.model.system.SysRoleTest;
-import com.mask.demo.service.beans.system.PageRange;
+import com.mask.demo.service.dto.system.PageRange;
 import com.mask.demo.utils.UUIDUtil;
 import com.mask.demo.frame.utils.CheckUtil;
 import lombok.extern.slf4j.Slf4j;

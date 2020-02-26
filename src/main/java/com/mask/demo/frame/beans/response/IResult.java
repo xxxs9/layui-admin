@@ -1,8 +1,9 @@
 package com.mask.demo.frame.beans.response;
 
 /**
- * 返回结果接口
- * Created by gameloft9 on 2017/11/10.
+ * @author: mac
+ * @description: 返回结果接口
+ * @date: 2020-02-25 16:20
  */
 public interface IResult {
 

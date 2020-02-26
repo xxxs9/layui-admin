@@ -1,6 +1,6 @@
 package com.mask.demo.service.api.system;
 
-import com.mask.demo.service.beans.system.LoginResponse;
+import com.mask.demo.service.dto.system.LoginResponse;
 
 /**
  * 登录业务服务

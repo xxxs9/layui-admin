@@ -5,7 +5,7 @@ import com.mask.demo.model.system.UserTest;
 import com.mask.demo.frame.beans.response.AbstractResult;
 import com.mask.demo.frame.exceptions.BizException;
 import com.mask.demo.service.api.system.LoginService;
-import com.mask.demo.service.beans.system.LoginResponse;
+import com.mask.demo.service.dto.system.LoginResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;

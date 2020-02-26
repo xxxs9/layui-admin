@@ -7,7 +7,9 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created by gameloft9 on 2017/11/28.
+ * @author: mac
+ * @description: TODO
+ * @date: 2020-02-25 17:53
  */
 @Data
 public class UserTest implements Serializable{

@@ -7,7 +7,7 @@ import com.mask.demo.frame.beans.response.IResult;
 import com.mask.demo.frame.beans.response.PageResultBean;
 import com.mask.demo.frame.beans.response.ResultBean;
 import com.mask.demo.service.api.system.SysOperLogService;
-import com.mask.demo.service.beans.system.LogBatchDelRequest;
+import com.mask.demo.service.dto.system.LogBatchDelRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

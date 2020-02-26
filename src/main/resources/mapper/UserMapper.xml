@@ -22,7 +22,7 @@
     <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String">
         select
         <include refid="Base_Column_List"/>
-        from USER_TEST
+        from SYS_USER
         where ID = #{id,jdbcType=VARCHAR}
     </select>
     <select id="countUserByNameAndPwd" resultType="Integer" parameterType="map">
@@ -30,7 +30,7 @@
          自己编写SQL，resultType是返回的字段类型，parameterType是请求的参数类型。
          loginName，password对应于mapper里面的参数名称
         -->
-        select count(1) from USER_TEST t WHERE
+        select count(1) from SYS_USER t WHERE
         t.LOGIN_NAME = #{loginName,jdbcType=VARCHAR}
         AND t.PASSWORD = #{password,jdbcType=VARCHAR}
     </select>
@@ -39,12 +39,12 @@
          自己编写SQL，resultType是返回的字段类型，parameterType是请求的参数类型。
          loginName，password对应于mapper里面的参数名称
         -->
-        select * from USER_TEST t WHERE
+        select * from SYS_USER t WHERE
         t.LOGIN_NAME = #{loginName,jdbcType=VARCHAR}
     </select>
     <!--mysql版本-->
     <select id="getAll" resultMap="BaseResultMap">
-        select * from USER_TEST t
+        select * from SYS_USER t
         where 1=1
         <if test="loginName != null and loginName != ''">
             and t.LOGIN_NAME = #{loginName,jdbcType=VARCHAR}
@@ -63,7 +63,7 @@
     <select id="getAll" resultMap="BaseResultMap">
         select a.* from(
         select b.*,rownum row_num
-        from( select * from USER_TEST t
+        from( select * from SYS_USER t
         where 1=1
         <if test="loginName != null and loginName != ''">
             and t.LOGIN_NAME = #{loginName,jdbcType=VARCHAR}
@@ -80,7 +80,7 @@
         )a where row_num &gt; #{start,jdbcType=DECIMAL}
     </select>-->
     <select id="countGetAll" parameterType="map" resultType="Integer">
-        select count(1) from USER_TEST t
+        select count(1) from SYS_USER t
         where 1=1
         <if test="loginName != null and loginName != ''">
             and t.LOGIN_NAME = #{loginName,jdbcType=VARCHAR}
@@ -93,11 +93,11 @@
         </if>
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    delete from USER_TEST
+    delete from SYS_USER
     where ID = #{id,jdbcType=VARCHAR}
   </delete>
     <insert id="insert" parameterType="com.mask.demo.model.system.UserTest">
-    insert into USER_TEST (ID, LOGIN_NAME, PASSWORD,
+    insert into SYS_USER (ID, LOGIN_NAME, PASSWORD,
     REAL_NAME, IS_FORBIDDEN, MOBILE,
     ICON, ORG_ID, ORG_NAME,
     CREATE_DATE, UPDATE_DATE)
@@ -107,7 +107,7 @@
     #{createDate,jdbcType=TIMESTAMP}, #{updateDate,jdbcType=TIMESTAMP})
   </insert>
     <insert id="insertSelective" parameterType="com.mask.demo.model.system.UserTest">
-        insert into USER_TEST
+        insert into SYS_USER
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
                 ID,
@@ -180,7 +180,7 @@
         </trim>
     </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.mask.demo.model.system.UserTest">
-        update USER_TEST
+        update SYS_USER
         <set>
             <if test="loginName != null">
                 LOGIN_NAME = #{loginName,jdbcType=VARCHAR},
@@ -216,7 +216,7 @@
         where ID = #{id,jdbcType=VARCHAR}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.mask.demo.model.system.UserTest">
-    update USER_TEST
+    update SYS_USER
     set LOGIN_NAME = #{loginName,jdbcType=VARCHAR},
     PASSWORD = #{password,jdbcType=VARCHAR},
     REAL_NAME = #{realName,jdbcType=VARCHAR},

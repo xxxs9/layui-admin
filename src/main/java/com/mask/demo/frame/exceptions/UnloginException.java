@@ -3,8 +3,9 @@ package com.mask.demo.frame.exceptions;
 import com.mask.demo.frame.beans.error.IErrCode;
 
 /**
- * 未登录异常
- * Created by leiYao on 2017/11/14.
+ * @author: mac
+ * @description: 未登录异常
+ * @date: 2020-02-25 16:20
  */
 public class UnloginException extends RuntimeException {
 

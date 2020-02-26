@@ -1,7 +1,7 @@
 package com.mask.demo.dao.system;
 
 import com.mask.demo.model.system.SysMenuTest;
-import com.mask.demo.service.beans.system.SysMenuTestExtend;
+import com.mask.demo.service.dto.system.SysMenuTestExtend;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
