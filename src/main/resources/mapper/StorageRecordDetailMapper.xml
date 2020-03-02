@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mask.demo.dao.depository.StorageRecordDetailMapper">
+
+    <resultMap id="BaseResultMap" type="com.mask.demo.model.depository.StorageRecordDetail">
+        <id column="id" property="id" />
+        <result column="storage_record_id" property="storageRecordId" />
+        <result column="product_id" property="productId" />
+        <result column="number" property="number" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        storage_record_id,
+        product_id,
+        number
+    </sql>
+
+    <!-- 根据出库记录id获取出库明细集合 -->
+    <select id="listByStorageRecordId" resultMap="BaseResultMap">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM t_sale_salesman_detail
+        WHERE storage_record_id = #{storageRecordId}
+    </select>
+
+</mapper>

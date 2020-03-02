@@ -143,7 +143,21 @@ layui.define(['$tool','jquery'], function (exports) {
         },
         UpdateUserInfo:function(req,config,successCallback,errorCallback){
             doComplexPost($tool.getContext() + 'personCenter/update.do',req,config,successCallback,errorCallback);
-        }
+        },
+
+        // 销售人员接口定义
+        DeleteSalesman:function(req,successCallback,errorCallback){
+            doPost($tool.getContext() + 'salesman/delete',req,successCallback,errorCallback);
+        },
+        GetSalesman:function(req,successCallback,errorCallback){
+            doPost($tool.getContext()+'salesman/get',req,successCallback,errorCallback);
+        },
+        AddSalesman:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'salesman/add',req,config,successCallback,errorCallback);
+        },
+        UpdateSalesman:function(req,config,successCallback,errorCallback){
+            doComplexPost($tool.getContext() + 'salesman/update',req,config,successCallback,errorCallback);
+        },
     };
 
 

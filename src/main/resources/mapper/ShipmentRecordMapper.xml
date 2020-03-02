@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mask.demo.dao.depository.ShipmentRecordMapper">
+
+    <resultMap id="BaseResultMap" type="com.mask.demo.model.depository.ShipmentRecord">
+        <id column="id" property="id" />
+        <result column="shipment_type_id" property="shipmentTypeId" />
+        <result column="shipment_mode_type_id" property="shipmentModeTypeId" />
+        <result column="relation_id" property="relationId" />
+        <result column="mark" property="mark" />
+        <result column="shipment_date" property="shipmentDate" />
+        <result column="create_id" property="createId" />
+        <result column="create_date" property="createDate" />
+        <result column="is_del" property="isDel" />
+    </resultMap>
+
+    <resultMap id="DtoResultMap" type="com.mask.demo.service.dto.depository.ShipmentDto">
+        <id column="id" property="id" />
+        <result column="shipment_type_id" property="shipmentTypeId" />
+        <result column="shipment_mode_type_id" property="shipmentModeTypeId" />
+        <result column="relation_id" property="relationId" />
+        <result column="mark" property="mark" />
+        <result column="shipment_date" property="shipmentDate" />
+        <result column="create_id" property="createId" />
+        <result column="create_date" property="createDate" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        shipment_type_id,
+        shipment_mode_type_id,
+        relation_id,
+        mark,
+        shipment_date,
+        create_id,
+        create_date,
+        is_del
+    </sql>
+
+    <!-- 分页加载 -->
+    <select id="listByQuery" resultMap="DtoResultMap">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM t_depository_shipment_record
+        WHERE
+            is_del = 0
+            <if test="orderNumber != null and orderNumber != '' ">
+              AND relation_id LIKE CONCAT('%',#{orderNumber},'%')
+            </if>
+            <if test="date != null and date != '' ">
+                AND FROM_UNIXTIME(pr.create_date,'%Y-%m-%d') = FROM_UNIXTIME(#{date},'%Y-%m-%d')
+            </if>
+        limit #{start,jdbcType=DECIMAL},#{end,jdbcType=DECIMAL}
+    </select>
+
+</mapper>

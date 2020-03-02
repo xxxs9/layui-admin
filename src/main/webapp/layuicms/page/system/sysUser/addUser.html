@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>新增民主测评</title>
+    <title>用户添加</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -26,136 +26,43 @@
     </style>
 </head>
 <body class="childrenBody">
-<form class="layui-form" style="width:80%;" id="minzhuForm">
-    <!--  <div class="layui-form-item">
-          <label class="layui-form-label">所属机构</label>
-          <div class="layui-input-block">
-              &lt;!&ndash;机构树&ndash;&gt;
-              <div class="org-tree">
-                  <ul id="org-tree" class="layui-box layui-tree"></ul>
-              </div>
-          </div>
-      </div>-->
-
-    <!--<div class="layui-input-block">
-        <input type="text" class="layui-input" lay-verify="required" name="usercode" placeholder="请输入登录名">
-    </div>-->
-    <div id="BIG">
-        <div class="minzhu layui-form-item parent-menu">
-            <label class="layui-form-label">大标题</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input" name="mtitle"  placeholder="请输入大标题">
-            </div>
-            <label class="layui-form-label">说明</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input" name="mexplain"  placeholder="请输入说明">
-            </div>
-            <label class="layui-form-label">投票人数</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input" name="mnumber"  placeholder="请输入投票人数">
-            </div>
-        </div>
-        <label class="layui-form-label">复选框</label>
+<form class="layui-form" style="width:80%;padding-top: 20px;">
+    <div class="layui-form-item">
+        <label class="layui-form-label">所属机构</label>
         <div class="layui-input-block">
-            <input type="checkbox" name="like[write]" title="写作" lay-filter="write">
-            <input type="checkbox" name="like[read]" title="阅读" lay-filter="read">
-        </div>
-        <!--子标题-->
-        <div class="mttitle layui-form-item">
-            <label class="layui-form-label">子标题</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input" name="mttitle"  placeholder="请输入子标题">
+            <!--机构树-->
+            <div class="org-tree">
+                <ul id="org-tree" class="layui-box layui-tree"></ul>
             </div>
-            <!--标准1-->
-            <div class="mtstitle layui-form-item">
-                <label class="layui-form-label">标准</label>
-                <div class="layui-input-block">
-                    <input type="text" class="layui-input" name="mtstitle"  placeholder="请输入标准">
-                </div>
-                <!--单选多选框 单选值为0 多选为1-->
-                <div class="layui-input-block">
-                    <input type="radio" name="'+radioGroupId+'" value="0" title="单选" class="mtstype">
-                    <input type="radio" name="'+radioGroupId+'" value="1" title="多选" class="mtstype">
-                </div>
-                <div class="layui-input-block">
-                    <button class="layui-btn"   type="button" onclick="addStandard(this)">新增标准</button>
-                </div>
-                <div class="layui-input-block">
-                    <div class="mtlvaluelow" id="mtlvaluelow">
-                        <label class="layui-form-label">子标准</label>
-                        <div class="mtlvalue layui-input-block">
-                            <input type="text" class="layui-input" name="mtlvalue"  placeholder="请输入子标准">
-                        </div>
-                        <label class="layui-form-label">子标准</label>
-                        <div class="mtlvalue layui-input-block">
-                            <input type="text" class="layui-input" name="mtlvalue"  placeholder="请输入子标准">
-                        </div>
-                        <!--新增子标准在这-->
-                    </div>
-                    <!--新增子标准-->
-                    <div class="layui-input-inline">
-                        <!--<i class="layui-icon layui-icon-add-1" style="font-size: 30px; color: #1E9FFF;"></i>-->
-                        <button class="layui-btn"   type="button" onclick="addLowStandard(this)">新增子标准</button>
-
-                    </div>
-                    <div class="layui-input-inline">
-                        <!--<i class="layui-icon layui-icon-add-1" style="font-size: 30px; color: #1E9FFF;"></i>-->
-                        <button class="layui-btn"   type="button" onclick="deleteLowStandard(this)">删除子标准</button>
-
-                    </div>
-
-                </div>
-
-            </div>
-            <!--新增标准会在这位置-->
-
         </div>
-        <!--新增子标题会在这位置-->
     </div>
-    <!--新增子标题-->
-    <div class="layui-input-block">
-        <button class="layui-btn"   id="addMinzhuTitle"  type="button" onclick="addTitle()">新增子标题</button>
-    </div>
-
-    <!--  <div class="mtstitle layui-form-item">
-          <label class="layui-form-label">标准2</label>
-          <div class="layui-input-block">
-              <input type="text" class="layui-input" name="mtstitle"  placeholder="请输入标准">
-          </div>
-          &lt;!&ndash;<label class="layui-form-label">请选择单选多选</label>
-          <input type="radio" class="layui-input" name="mtstitle"  placeholder="请输入标准">&ndash;&gt;
-          &lt;!&ndash;子标准1&ndash;&gt;
-          <div class="layui-input-block">
-              <label class="layui-form-label">子标准3</label>
-              <div class="mtlvalue layui-input-block">
-                  <input type="text" class="layui-input" name="mtlvalue"  placeholder="请输入子标准">
-              </div>
-              <label class="layui-form-label">子标准4</label>
-              <div class="mtlvalue layui-input-block">
-                  <input type="text" class="layui-input" name="mtlvalue"  placeholder="请输入子标准">
-              </div>
-          </div>
-      </div>-->
-
-
-
-    <!--
-        <div class="layui-form-item">
-            <label class="layui-form-label">手机号码</label>
-            <div class="layui-input-block">
-                <input type="text" class="layui-input" lay-verify="phone" name="mobile"  placeholder="请输入手机号码">
-            </div>
+    <div class="layui-form-item parent-menu">
+        <label class="layui-form-label">登录名</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" lay-verify="required" name="loginName" placeholder="请输入登录名">
         </div>
-        <div class="layui-form-item">
-            <label class="layui-form-label">权限配置</label>
-            <div class="layui-input-block role-check-list">
-                &lt;!&ndash;动态生成角色列表&ndash;&gt;
-            </div>
-        </div>-->
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">真实姓名</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" name="realName" placeholder="请输入真实姓名">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">手机号码</label>
+        <div class="layui-input-block">
+            <input type="text" class="layui-input" lay-verify="phone" name="mobile"  placeholder="请输入手机号码">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">权限配置</label>
+        <div class="layui-input-block role-check-list">
+            <!--动态生成角色列表-->
+        </div>
+    </div>
     <div class="layui-form-item">
         <div class="layui-input-block">
-            <button class="layui-btn" lay-submit="" lay-filter="addMinzhu">发布</button>
-            <button class="layui-btn" type="button" id="addMinzhutemplment">存为模板</button>
+            <button class="layui-btn" lay-submit="" lay-filter="addUser">立即提交</button>
             <button type="reset" class="layui-btn layui-btn-primary">重置</button>
         </div>
     </div>
@@ -165,172 +72,5 @@
 <script type="text/javascript" src="../../../lib/layui/layui.js"></script>
 <script type="text/javascript" src="../../../common/js/config.js"></script>
 <script type="text/javascript" src="addUser.js"></script>
-
-<script type="text/javascript">
-    //按钮组id
-    var radioGroupId = 1;
-
-
-    /*新增子标准*/
-    function addLowStandard(div){
-        var Demo =div.parentNode.parentNode;
-        var mtlvaluelow=Demo.getElementsByClassName("mtlvaluelow")[0];
-        var TitleLowStandard ='<label class="layui-form-label">子标准</label>\n' +
-            '                    <div class="mtlvalue layui-input-block">\n' +
-            '                    <input type="text" class="layui-input" name="mtlvalue"  placeholder="请输入子标准">\n' +
-            '                    </div>';
-        mtlvaluelow.innerHTML+=TitleLowStandard;
-    }
-    /*删除子标准*/
-    function deleteLowStandard(div) {
-        var Demo =div.parentNode.parentNode;
-        var mtlvaluelow=Demo.getElementsByClassName("mtlvaluelow")[0];
-        var mtlvaluelowGroup = mtlvaluelow.getElementsByClassName("mtlvalue");
-        var labelGroup = mtlvaluelow.getElementsByClassName("layui-form-label");
-        if (mtlvaluelowGroup.length<=2){
-            alert("一个标准至少有两个子标准");
-        }else {
-            mtlvaluelowGroup[mtlvaluelowGroup.length-1].remove();
-            labelGroup[labelGroup.length-1].remove();
-        }
-
-    }
-
-
-
-
-
-    /*
-    * 新增标准
-    * */
-
-    function addStandard(div){
-        /*var addTitleStandard=''*/
-        //获取他的上一级元素
-        radioGroupId++;
-        var divDemo = div.parentNode.parentNode.parentNode;
-
-        var TitleStandard = '<div class="mtstitle layui-form-item">\n' +
-            '                <label class="layui-form-label">标准</label>\n' +
-            '                <div class="layui-input-block">\n' +
-            '                <input type="text" class="layui-input" name="mtstitle"  placeholder="请输入标准">\n' +
-            '                </div>\n' +
-            '                <!--单选多选框 单选值为0 多选为1-->\n' +
-            '                <div class="layui-input-block">\n' +
-            '                    <input type="radio" name="'+radioGroupId+'" value="0" title="单选" class="mtstype">\n' +
-            '                    <input type="radio" name="'+radioGroupId+'" value="1" title="多选" class="mtstype">\n' +
-            '                </div>\n' +
-            '                <div class="layui-input-block">\n' +
-            '                <button class="layui-btn"   type="button" onclick="addStandard(this)">新增标准</button>\n' +
-            '                </div>\n' +
-            '                <div class="layui-input-block">\n' +
-            '                   <div class="mtlvaluelow" id="mtlvaluelow">\n' +
-            '                    <label class="layui-form-label">子标准</label>\n' +
-            '                    <div class="mtlvalue layui-input-block">\n' +
-            '                    <input type="text" class="layui-input" name="mtlvalue"  placeholder="请输入子标准">\n' +
-            '                    </div>\n' +
-            '                    <label class="layui-form-label">子标准</label>\n' +
-            '                    <div class="mtlvalue layui-input-block">\n' +
-            '                    <input type="text" class="layui-input" name="mtlvalue"  placeholder="请输入子标准">\n' +
-            '                    </div>\n' +
-            '                       <!--新增子标准在这-->\n' +
-            '                   </div>\n' +
-            '                    <!--新增子标准-->\n' +
-            '                    <div class="layui-input-inline">\n' +
-            '                        <!--<i class="layui-icon layui-icon-add-1" style="font-size: 30px; color: #1E9FFF;"></i>-->\n' +
-            '                        <button class="layui-btn"   type="button" onclick="addLowStandard(this)">新增子标准</button>\n' +
-            '\n' +
-            '                    </div>\n' +
-            '                    <div class="layui-input-inline">\n' +
-            '                        <!--<i class="layui-icon layui-icon-add-1" style="font-size: 30px; color: #1E9FFF;"></i>-->\n' +
-            '                        <button class="layui-btn"   type="button" onclick="deleteLowStandard(this)">删除子标准</button>\n' +
-            '\n' +
-            '                    </div>\n' +
-            '\n' +
-            '                </div>\n' +
-            '\n' +
-            '            </div>';
-
-        divDemo.innerHTML+=TitleStandard;
-        // layui.use('form',function () {
-        //     var form = layui.form
-        //     form.render('radio');
-        // })
-    }
-
-
-
-
-
-
-
-
-
-    /*
-    * 新增子标题
-    * */
-    function  addTitle(){
-        radioGroupId++;
-        var addTitle = '  <div class="mttitle layui-form-item">\n' +
-            '            <label class="layui-form-label">子标题</label>\n' +
-            '            <div class="layui-input-block">\n' +
-            '            <input type="text" class="layui-input" name="mttitle"  placeholder="请输入子标题">\n' +
-            '            </div>\n' +
-            '            <!--标准1-->\n' +
-            '            <div class="mtstitle layui-form-item">\n' +
-            '                <label class="layui-form-label">标准</label>\n' +
-            '                <div class="layui-input-block">\n' +
-            '                <input type="text" class="layui-input" name="mtstitle"  placeholder="请输入标准">\n' +
-            '                </div>\n' +
-            '                <!--单选多选框 单选值为0 多选为1-->\n' +
-            '                <div class="layui-input-block">\n' +
-            '                    <input type="radio" name="'+radioGroupId+'" value="0" title="单选" class="mtstype">\n' +
-            '                    <input type="radio" name="'+radioGroupId+'" value="1" title="多选" class="mtstype">\n' +
-            '                </div>\n' +
-            '                <div class="layui-input-block">\n' +
-            '                <button class="layui-btn"   type="button" onclick="addStandard(this)">新增标准</button>\n' +
-            '                </div>\n' +
-            '                <div class="layui-input-block">\n' +
-            '                   <div class="mtlvaluelow" id="mtlvaluelow">\n' +
-            '                    <label class="layui-form-label">子标准</label>\n' +
-            '                    <div class="mtlvalue layui-input-block">\n' +
-            '                    <input type="text" class="layui-input" name="mtlvalue"  placeholder="请输入子标准">\n' +
-            '                    </div>\n' +
-            '                    <label class="layui-form-label">子标准</label>\n' +
-            '                    <div class="mtlvalue layui-input-block">\n' +
-            '                    <input type="text" class="layui-input" name="mtlvalue"  placeholder="请输入子标准">\n' +
-            '                    </div>\n' +
-            '                       <!--新增子标准在这-->\n' +
-            '                   </div>\n' +
-            '                    <!--新增子标准-->\n' +
-            '                    <div class="layui-input-inline">\n' +
-            '                        <!--<i class="layui-icon layui-icon-add-1" style="font-size: 30px; color: #1E9FFF;"></i>-->\n' +
-            '                        <button class="layui-btn"   type="button" onclick="addLowStandard(this)">新增子标准</button>\n' +
-            '\n' +
-            '                    </div>\n' +
-            '                    <div class="layui-input-inline">\n' +
-            '                        <!--<i class="layui-icon layui-icon-add-1" style="font-size: 30px; color: #1E9FFF;"></i>-->\n' +
-            '                        <button class="layui-btn"   type="button" onclick="deleteLowStandard(this)">删除子标准</button>\n' +
-            '\n' +
-            '                    </div>\n' +
-            '\n' +
-            '                </div>\n' +
-            '\n' +
-            '            </div>\n' +
-            '          <!--新增标准会在这位置-->\n' +
-            '\n' +
-            '        </div>';
-        var c=document.getElementById('BIG');
-
-        c.innerHTML+=addTitle;
-        layui.use('form',function () {
-            var form = layui.form
-            form.render('radio');
-        })
-    }
-
-</script>
-
-
 </body>
 </html>

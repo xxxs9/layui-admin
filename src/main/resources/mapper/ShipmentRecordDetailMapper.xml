@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mask.demo.dao.depository.ShipmentRecordDetailMapper">
+
+    <resultMap id="BaseResultMap" type="com.mask.demo.model.depository.ShipmentRecordDetail">
+        <id column="id" property="id" />
+        <result column="shipment_record_id" property="shipmentRecordId" />
+        <result column="product_id" property="productId" />
+        <result column="number" property="number" />
+        <result column="carton_box_number" property="cartonBoxNumber" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,
+        shipment_record_id,
+        product_id,
+        number,
+        carton_box_number
+    </sql>
+
+    <!-- 根据出库记录id获取出库明细集合 -->
+    <select id="listByShipmentRecordId" resultMap="BaseResultMap">
+        SELECT
+            <include refid="Base_Column_List"/>
+        FROM t_sale_salesman_detail
+        WHERE shipment_record_id = #{shipmentRecordId}
+    </select>
+
+</mapper>

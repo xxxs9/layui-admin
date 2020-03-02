@@ -1,5 +1,7 @@
 package com.mask.demo.utils;
 
+import org.springframework.util.StringUtils;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -49,6 +51,20 @@ public class DateUtil {
         } catch (Exception e) {
             throw new RuntimeException("日期解析异常");
         }
+    }
+
+    /**
+     * 字符串转时间戳
+     * 空串返回null
+     * @param str
+     * @return Long时间戳
+     */
+    public static Long str2Long(String str){
+        Long dateTime = null;
+        if (!StringUtils.isEmpty(str)){
+            dateTime = str2Date(str).getTime();
+        }
+        return dateTime;
     }
 
     /**

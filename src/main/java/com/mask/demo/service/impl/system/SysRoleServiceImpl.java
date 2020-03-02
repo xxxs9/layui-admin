@@ -68,7 +68,7 @@ public class SysRoleServiceImpl implements SysRoleService{
         CheckUtil.notBlank(roleName,"角色名称为空");
         CheckUtil.notBlank(isSuper,"是否超级管理员不能为空");
 
-        //角色名称不能重复
+        //角色名称不能 重复
         SysRoleTest roleTest = sysRoleTestDao.getByRoleName(roleName);
         CheckUtil.check(roleTest == null,"该角色名称已经存在");
 

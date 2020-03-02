@@ -73,13 +73,15 @@ public class LoginServiceImpl implements LoginService{
         //验证是否通过
         if(currentUser.isAuthenticated()){
             log.info("验证成功！");
-            //还可以把用户信息放入session中
-            request.getSession().setAttribute("sysUser",loginName);
 
             //拼接返回信息
             UserTest userTest = userMapper.getByLoginName(loginName);
             loginResponse.setUserId(userTest.getId());
             loginResponse.setLoginName(loginName);
+            //还可以把用户信息放入session中
+            request.getSession().setAttribute("sysUser",loginName);
+            request.getSession().setAttribute("sysUserId",userTest.getId());
+
             String baseUrl = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+request.getContextPath()+"/";
             loginResponse.setWebContext(baseUrl);
             return loginResponse;
